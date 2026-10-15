@@ -1,185 +1,69 @@
 # SEMGREP
 
-![license](https://img.shields.io/badge/license-license-blue) ![offline-first](https://img.shields.io/badge/offline--first-air--gap-green) ![audit](https://img.shields.io/badge/audit-SHA3--256-orange) ![category](https://img.shields.io/badge/category-software_development-lightgrey)
-
-> Anticloud-hardened packaging of the upstream project `SEMGREP` in category **SOFTWARE DEVELOPMENT**. No upstream snapshot is present on disk for this project; the pinned commit below was resolved during the second documentation pass, and the 12-improvement overlay lives in `anticloud/`. Every fact in this file traces to a file on disk in this project directory.
-
-**Category:** SOFTWARE DEVELOPMENT · **Upstream:** https://github.com/0xdea/semgrep-rules · **Upstream pin:** `dae50da6e6e629750f1daec73a01ef9206a372ab` · **Vendor:** Anticloud FZ LLE
-
----
+> Anticloud offline package — upstream: semgrep/semgrep @ `develop`.
 
 ## What This Project Does
 
-**SEMGREP** — Curated Semgrep static-analysis rules from 0xdea (YAML).
+Lightweight static analysis for many languages. Find bug variants with patterns that look like source code.
 
-The project is vendored into the Anticloud project at a pinned upstream commit and hardened with the standard 12-improvement overlay (see the Benchmarks section).
+**Topics:** c, go, java, javascript, python, r2c, ruby, sast, semgrep, static-analysis, static-code-analysis, typescript
 
-Project-specific facts detected in this directory:
+## Upstream README
 
-- Ecosystem: **Unknown (no standard manifest detected)** (manifests: none detected; scanned in project root)
-- Upstream snapshot: none on disk for this project; only the Anticloud packaging directories are present
-- Upstream commit pinned for this packaging: `dae50da6e6e629750f1daec73a01ef9206a372ab`
+<br />
+<p align="center">
+  <a href="https://semgrep.dev">
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset="images/semgrep-logo-light.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="images/semgrep-logo-dark.svg">
+      <img src="https://raw.githubusercontent.com/semgrep/semgrep/develop/images/semgrep-logo-light.svg" height="100" alt="Semgrep logo"/>
+    </picture>
+  </a>
+</p>
+<h2 align="center">
+  Code scanning at ludicrous speed.
+</h2>
+<p align="center">
+  <a href="https://formulae.brew.sh/formula/semgrep">
+    <img src="https://img.shields.io/homebrew/v/semgrep?style=flat-square" alt="Homebrew" />
+  </a>
+  <a href="https://pypi.org/project/semgrep/">
+    <img alt="PyPI" src="https://img.shields.io/pypi/v/semgrep?style=flat-square&color=blue">
+  </a>
+  <a href="https://semgrep.dev/docs/">
+      <img src="https://img.shields.io/badge/docs-semgrep.dev-purple?style=flat-square" alt="Documentation" />
+  </a>
+  <a href="https://go.semgrep.dev/slack">
+    <img src="https://img.shields.io/badge/slack-3.5k%20members-green?style=flat-square" alt="Join Semgrep community Slack" />
+  </a>
+  <a href="https://github.com/semgrep/semgrep/issues/new/choose">
+    <img src="https://img.shields.io/badge/issues-welcome-green?style=flat-square" alt="Issues welcome!" />
+  </a>
+  <a href="https://github.com/semgrep/semgrep#readme">
+    <img src="https://img.shields.io/github/stars/semgrep/semgrep?label=GitHub%20Stars&style=flat-square" alt="Star Semgrep on GitHub" />
+  </a>
+  <a href="https://hub.docker.com/r/semgrep/semgrep">
+    <img src="https://img.shields.io/docker/pulls/semgrep/semgrep.svg?style=flat-square" alt="Docker Pulls" />
+  </a>
+  <a href="https://hub.docker.com/r/semgrep/semgrep">
+    <img src="https://img.shields.io/docker/pulls/semgrep/semgrep.svg?style=flat-square" alt="Docker Pulls (Old)" />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=semgrep">
+    <img src="https://img.shields.io/twitter/follow/semgrep?label=Follow%20semgrep&style=social&color=blue" alt="Follow @semgrep on Twitter" />
+  </a>
+</p>
+</br>
 
----
+Semgrep is a fast, open-source, static analysis tool that searches code, finds bugs, and enforces secure guardrails and coding standards. Semgrep [supports 30+ languages](#language-support) and can run in an IDE, as a pre-commit check, and as part of CI/CD workflows.
 
-## Installation
+Semgrep is semantic grep for code. While running `grep "2"` would only match the exact string _2_, Semgrep would [match `x = 1; y = x + 1` when searching for _2_](https://semgrep.dev/playground/s/5rKgj). Semgrep rules look like the code you already write; no abstract syntax trees, regex wrestling, or painful DSLs.
 
-No installation section was found in the upstream readme, so the commands below are generated from the manifests detected in this project directory.
-
-```sh
-# No upstream snapshot on disk; consult the upstream project (see the
-# Upstream section) for build and install instructions.
-```
-
-Overlay install (this project):
-
-```sh
-python -m pip install -e anticloud/     # overlay package with the 12 improvements
-python anticloud/cli.py --help          # 13 subcommands, JSON stdout
-```
-
----
-
-## Usage
-
-No usage section was found in the upstream readme. Entry points detected in this project directory:
-
-Browse the snapshot layout listed under What This Project Does and follow the upstream run instructions for the detected ecosystem (Unknown (no standard manifest detected)).
-
-Anticloud overlay CLI (available in every project):
-
-```sh
-python anticloud/cli.py --help     # 13 subcommands, JSON stdout
-python anticloud/cli.py checks     # run the 16-check suite
-```
-
----
-
-## API
-
-The upstream API surface is defined by the `SEMGREP` upstream project (Unknown (no standard manifest detected) ecosystem); no source snapshot is vendored for this project. Entry points recorded for this packaging:
-
-- Overlay API: `anticloud/cli.py` exposes 13 subcommands with JSON stdout; `anticloud/bench/runner.py` runs the 16-check suite; `anticloud/provenance/chain.py` exposes the SHA3-256 + Ed25519 provenance chain.
-
----
-
-## Dependencies
-
-| Metric | Value |
-|--------|-------|
-| Ecosystem | Unknown (no standard manifest detected) |
-| Manifests detected | none |
-| Files in snapshot | not captured in this benchmark snapshot |
-| Lines of code | not captured in this benchmark snapshot |
-| Dependency references | not captured in this benchmark snapshot |
-| Upstream license | Not captured in this benchmark snapshot (no upstream snapshot on disk) |
-| Overlay license | Anticommons 0.1.0 |
-
-Pinned lockfile: `anticloud/requirements.lock` (hash-pinned, PEP 508). SBOM: `sbom.cdx.json` (CycloneDX 1.5, pinned to the upstream SHA).
-
----
-
-## Configuration
-
-No configuration section was found in the upstream readme. Configuration-relevant files detected in this project directory:
-
-- None detected at the snapshot root; consult the upstream documentation link in the Upstream section.
-
-Overlay configuration (Anticloud):
-
-- `anticloud/` - improvement overlay; environment-driven, no cloud dependency
-- `LEDGERS/` - aioss tamper-evident chain files (per-project, verified with `aioss verify --live`)
-- `ISOLATED_LAB_RESULTS/` - reproducibility record (environment, reproduction steps, result register, evidence)
-- `OFFICIAL_BENCHMARKS/` - 26 framework assessments for this project
-
----
-
-## Contributing
-
-Upstream contributions: fork the `SEMGREP` project, create a feature branch, and open a pull request against upstream. Keep `UPSTREAM_CLONE/` untouched in this packaging; put improvements in the `anticloud/` overlay.
-
-Overlay contributions: run the 16-check suite before opening a pull request:
-
-```sh
-python anticloud/bench/runner.py --cwd anticloud
-```
-
----
+Note that in security contexts, Semgrep Community Edition will miss many true positives as it can only analyze code within the boundaries of a single function or file. If you want to use Semgrep for security purposes (**SAST**, **SCA**, or **secrets scanning**), the Semgrep AppSec Platform is strongly recommended s
 
 ## License
 
-**Upstream license: Not captured in this benchmark snapshot (no upstream snapshot on disk).** The upstream project linked in the Upstream section is the authoritative source for its license terms.
+Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
 
-### Anticommons 0.1.0 overlay
+## Verification
 
-The Anticloud integration overlay in `anticloud/` - improvements 1 through 12 listed under Benchmarks - is licensed under **Anticommons 0.1.0**. Upstream code remains under its original Not captured in this benchmark snapshot (no upstream snapshot on disk) terms. See `ANTICOMMONS_LICENSE.md` in this directory for the overlay terms and contact.
-
-SPDX: `Not captured in this benchmark snapshot (no upstream snapshot on disk)` (upstream) + Anticommons 0.1.0 (overlay, dual).
-
----
-
-## Upstream
-
-- **Project:** `SEMGREP` (category: SOFTWARE DEVELOPMENT)
-- **Upstream URL:** https://github.com/0xdea/semgrep-rules
-- **Pinned commit (SHA):** `dae50da6e6e629750f1daec73a01ef9206a372ab`
-- **Branch:** main
-- **Pin provenance:** GitHub API commits/main. The parent-project stamp is explicitly rejected for this project.
-- **Snapshot location:** none on disk for this project
-- **Benchmark snapshot:** `BENCH.json`
-
----
-
-## Benchmarks
-
-Measured by the Anticloud assurance suite. Every value below is read from this
-project's `BENCH.json`, produced by a real run — the SHA3-256 of that file is
-`dcecee7765b534699910513de23213a894953f065f95e2cfb7eb083b73e099a4`.
-
-| Framework | Controls | Evidence | Coverage | Result |
-|---|---|---|---|---|
-| OWASP Top 10 for LLM Applications | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| OWASP Top 10 (2021) | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| SOC 2 Type II readiness | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| NIST AI Risk Management Framework | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| NIST SP 800-53 Rev. 5 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| NIST Cybersecurity Framework 2.0 | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| FedRAMP Rev. 5 | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| PCI DSS v4.0.1 | 11 controls mapped | 11 with evidence | 100.0% | PASS |
-| ISO/IEC 27001:2022 | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| MITRE ATT&CK v16 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| ML Technology Readiness Level | TRL 8 | 8/8 criteria | | PASS |
-
-**Overall: 16/16 checks passing.**
-
-See `ISOLATED_LAB_RESULTS/03_Result_Register.md` for the 16-check register with pass condition, command and observed value per check.
-
-Framework folders in `OFFICIAL_BENCHMARKS/` state the control set and the
-evidence source bound to each control. This project does not claim an audit
-opinion, a SOC report, a FedRAMP authorisation or a PCI attestation — those are
-issued by an independent assessor.
-
-
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
-
-
-
-## Press and Independent Publication
-
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe and Mail, Business Insider, National Post, Financial Post, StreetInsider, Digital Journal, Barchart, International Business Times, and fox47 · National Law Review.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
-
+Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
